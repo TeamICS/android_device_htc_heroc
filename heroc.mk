@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/heroc/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/heroc/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/heroc/prebuilt/media_codecs.xml:system/etc/media_codecs.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
