@@ -65,14 +65,14 @@ namespace android_audio_legacy {
 // ----------------------------------------------------------------------------
 
 
-class AudioPolicyManager: public AudioPolicyManagerBase
+class AudioPolicyManager: public AudioPolicyInterface
 {
 
 public:
-                AudioPolicyManager(AudioPolicyClientInterface *clientInterface)
-                : AudioPolicyManagerBase(clientInterface) {}
+                AudioPolicyManager(AudioPolicyClientInterface *clientInterface);
+                //: AudioPolicyManagerBase(clientInterface) {}
 
-        virtual ~AudioPolicyManager() {}
+        virtual ~AudioPolicyManager();
 
         // AudioPolicyInterface
         virtual status_t setDeviceConnectionState(AudioSystem::audio_devices device,
