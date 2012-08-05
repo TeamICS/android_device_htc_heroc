@@ -19,12 +19,22 @@ on boot
     setkey 0xc0 0x8b 0x707
     setkey 0xc0 0x6b 0x20c
 
-on fs
-    # setup sdcard and mount
-    export EXTERNAL_STORAGE /mnt/sdcard
-    mkdir /mnt/sdcard 0000 system system
+on early-init
+    #sdcard
+    export EXTERNAL_STORAGE /storage/sdcard0
+    mkdir /storage 0775 system sdcard_r
+    mkdir /storage/sdcard0 0000 system system
+
     # for backwards compatibility
-    symlink /mnt/sdcard /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/sdcard0 /sdcard
+
+    #sd-ext
+    mkdir /sd-ext 0771 system system
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SD_EXT_DIRECTORY /sd-ext
+
+on fs
 
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
