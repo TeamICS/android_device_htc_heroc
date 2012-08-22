@@ -69,6 +69,10 @@ PRODUCT_COPY_FILES += \
     device/htc/heroc/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
     device/htc/heroc/prebuilt/media_codecs.xml:system/etc/media_codecs.xml
 
+# Audio_policy.conf
+PRODUCT_COPY_FILES += \
+    
+device/htc/heroc/prebuilt/audio_policy.conf:system/etc/audio_policy.conf
 # Keylayouts
 PRODUCT_COPY_FILES += \
     device/htc/heroc/prebuilt/heroc-keypad.kl:system/usr/keylayout/heroc-keypad.kl \
