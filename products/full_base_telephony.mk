@@ -14,13 +14,22 @@
 # limitations under the License.
 #
 
-#
-# Inherit products
-#
-$(call inherit-product, device/htc/heroc/product/mini_telephony.mk)
-$(call inherit-product, device/htc/heroc/heroc.mk)
+# This is a build configuration for a full-featured build of the
+# Open-Source part of the tree. It's geared toward a US-centric
+# build quite specifically for the emulator, and might not be
+# entirely appropriate to inherit from for on-device configurations.
 
-PRODUCT_NAME := generic_heroc
-PRODUCT_DEVICE := heroc
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on HeroC
+PRODUCT_AAPT_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+# en_US only
+PRODUCT_LOCALES := en_US
+
+PRODUCT_PACKAGES := \
+    VoiceDialer
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    keyguard.no_require_sim=true
+
+$(call inherit-product, device/htc/heroc/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
