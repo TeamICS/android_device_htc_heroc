@@ -17,7 +17,7 @@
 #
 # Inherit products
 #
-$(call inherit-product, device/htc/heroc/product/mini_telephony.mk)
+$(call inherit-product, device/htc/heroc/product/full_base_telephony.mk)
 $(call inherit-product, device/htc/heroc/heroc.mk)
 
 PRODUCT_NAME := generic_heroc
