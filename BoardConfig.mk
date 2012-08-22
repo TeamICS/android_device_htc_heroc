@@ -72,9 +72,6 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 4410
 #JB BOARD_USES_QCOM_HARDWARE := true
 #JB BOARD_USES_QCOM_LIBS := true
 
-#We use legacy RIL in jb
-LEGACY_RIL := true
-
 TARGET_HARDWARE_3D := false
 
 # OpenGL drivers config file path
