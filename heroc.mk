@@ -71,8 +71,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio_policy.conf
 PRODUCT_COPY_FILES += \
-    
-device/htc/heroc/prebuilt/audio_policy.conf:system/etc/audio_policy.conf
+    device/htc/heroc/prebuilt/audio_policy.conf:system/etc/audio_policy.conf
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     device/htc/heroc/prebuilt/heroc-keypad.kl:system/usr/keylayout/heroc-keypad.kl \
