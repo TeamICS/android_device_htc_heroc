@@ -59,6 +59,10 @@ WIFI_FIRMWARE_LOADER        := "wlan_loader"
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x19200000
 
+#Custom LUN File Path for UMS
+
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
+
 BOARD_USES_GENERIC_AUDIO := false
 #ICS BOARD_USES_AUDIO_LEGACY := true
 BOARD_USES_AUDIO_LEGACY := true
