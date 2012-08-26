@@ -21,7 +21,6 @@ LOCAL_KERNEL := device/htc/heroc/prebuilt/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
@@ -38,6 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/heroc/prebuilt/init.heroc.rc:root/init.heroc.rc \
+    device/htc/heroc/prebuilt/init.heroc.usb.rc:root/init.heroc.usb.rc \
     device/htc/heroc/prebuilt/fstab.heroc:root/fstab.heroc \
     device/htc/heroc/prebuilt/ueventd.heroc.rc:root/ueventd.heroc.rc
 
@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 
 
 # HeroC uses mdpi artwork where available
-PRODUCT_LOCALES += mdpi
+PRODUCT_LOCALES += mdpi \
+   en_US
 
 # Install HeroC kernel modules
 $(call inherit-product, device/htc/heroc/heroc-modules.mk)
