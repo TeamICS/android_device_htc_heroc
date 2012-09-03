@@ -114,7 +114,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Superuser \
     libsqlite \
-    Superuser.apk \
+    LegacyCamera \
     su
 
 
